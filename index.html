@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia</title>
+  <style>
+    .header, .question-container {
+      margin: 50px;
+      text-align: center;
+    }
+    .answers-container {
+      justify-content: center;
+      display: flex;
+      gap: 50px;
+    }
+    .option button {
+      border: none;
+      padding: 20px;
+      background-color: slategrey;
+      border-radius: 10px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .hidden {
+      display: none;
+    }
+    .start-button {
+        
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .start-button button {
+      border: none;
+      padding: 20px;
+      background-color: coral;
+      color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .timer-container {
+      display: flex;
+      justify-content: center;
+    }
+    .timer-bar {
+      width: 50%;
+      height: 10px;
+      background-color: lightgray;
+      position: relative;
+      margin-top: 20px;
+      border-radius: 50px;
+    }
+    .timer-progress {
+      height: 100%;
+      background-color: coral;
+      width: 100%;
+      border-radius: 50px;
+    }
+    .result-container {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Trivia</h1>
+    </div>
+    <div class="start-button">
+      <button id="start-trivia">Start</button>
+    </div>
+    <div class="trivia-container hidden">
+      <div class="question-container">
+        <span id="question"></span>
+      </div>
+      <div class="answers-container">
+        <div class="option">
+          <button id="option-a"></button>
+        </div>
+        <div class="option">
+          <button id="option-b"></button>
+        </div>
+        <div class="option">
+          <button id="option-c"></button>
+        </div>
+      </div>
+      <div class="timer-container">
+        <div class="timer-bar">
+          <div class="timer-progress" id="timer-progress"></div>
+        </div>
+      </div>
+    </div>
+    <div class="result-container">
+      <div class="result">
+        <span id="result-message"></span>
+      </div>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
